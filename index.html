@@ -21,13 +21,39 @@
         button:hover { opacity: 0.9; }
         .badge { background: #dcfce7; color: #166534; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
     </style>
+    <script type="text/javascript" src="https://cdn-dev-intg-9.securiti.xyz/consent/auto_blocking/79566875-3741-4218-8dbf-3cb421fc1c09/8cbc260e-019c-4eac-97ee-d34417259710.js"></script>
+    <script>
+(function () {
+	var s = document.createElement('script');
+	s.src = 'https://cdn-dev-intg-9.securiti.xyz/consent/cookie-consent-sdk-loader.js';
+	s.setAttribute('data-tenant-uuid', '79566875-3741-4218-8dbf-3cb421fc1c09');
+	s.setAttribute('data-domain-uuid', '8cbc260e-019c-4eac-97ee-d34417259710');
+	s.setAttribute('data-backend-url', 'https://dev-intg-9.securiti.xyz');
+	s.setAttribute('data-skip-css', 'false');
+	s.defer = true;
+	var parent_node = document.head || document.body;
+	parent_node.appendChild(s);
+})()
+</script>
 </head>
 <body>
     <div class="container">
     <div class="card">
         <h1>🍪 Cookie Transition Test</h1>
 
-      
+        <div class="status-box">
+            <div>Privacy Cookies (__privaci_*): <span id="cookieCount">0</span></div>
+        </div>
+
+        <div class="status-box" style="margin-top: 20px;">
+            <h3 style="margin-top: 0; font-size: 1rem;">🔒 Privacy Cookies (__privaci_*)</h3>
+            <div id="privaciCookies" style="font-size: 0.9rem; color: #64748b;">No privacy cookies found</div>
+        </div>
+
+        <div class="btn-group">
+            <button onclick="clearAllCookies()">🧹 Clear All Cookies</button>
+        </div>
+
     </div>
   </div>
     <script src="./index.js"></script>
